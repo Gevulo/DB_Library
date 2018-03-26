@@ -11,3 +11,16 @@ C:\Users\student.LAN\Desktop\Oli\CommandProject\DB_Library\DB_Library\obj\Debug\
 C:\Users\student.LAN\Desktop\Oli\CommandProject\DB_Library\DB_Library\obj\Debug\DB_Library.csproj.GenerateResource.Cache
 C:\Users\student.LAN\Desktop\Oli\CommandProject\DB_Library\DB_Library\obj\Debug\DB_Library.exe
 C:\Users\student.LAN\Desktop\Oli\CommandProject\DB_Library\DB_Library\obj\Debug\DB_Library.pdb
+D:\sp\MSP_26.03.18\DB_Library\DB_Library\bin\Debug\DB_Library.exe.config
+D:\sp\MSP_26.03.18\DB_Library\DB_Library\obj\Debug\DB_Library.exe
+D:\sp\MSP_26.03.18\DB_Library\DB_Library\obj\Debug\DB_Library.pdb
+D:\sp\MSP_26.03.18\DB_Library\DB_Library\bin\Debug\DB_Library.exe
+D:\sp\MSP_26.03.18\DB_Library\DB_Library\bin\Debug\DB_Library.pdb
+D:\sp\MSP_26.03.18\DB_Library\DB_Library\obj\Debug\DB_Library.csprojResolveAssemblyReference.cache
+D:\sp\MSP_26.03.18\DB_Library\DB_Library\obj\Debug\DB_Library.AboutForm.resources
+D:\sp\MSP_26.03.18\DB_Library\DB_Library\obj\Debug\DB_Library.AddForm.resources
+D:\sp\MSP_26.03.18\DB_Library\DB_Library\obj\Debug\DB_Library.DeleteForm.resources
+D:\sp\MSP_26.03.18\DB_Library\DB_Library\obj\Debug\DB_Library.LoadForm.resources
+D:\sp\MSP_26.03.18\DB_Library\DB_Library\obj\Debug\DB_Library.MainForm.resources
+D:\sp\MSP_26.03.18\DB_Library\DB_Library\obj\Debug\DB_Library.Properties.Resources.resources
+D:\sp\MSP_26.03.18\DB_Library\DB_Library\obj\Debug\DB_Library.csproj.GenerateResource.Cache
