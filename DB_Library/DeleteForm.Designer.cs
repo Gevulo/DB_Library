@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeleteForm));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.SearchBooksButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -107,6 +108,7 @@
             this.ClientSize = new System.Drawing.Size(944, 102);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DeleteForm";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

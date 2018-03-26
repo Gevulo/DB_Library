@@ -17,7 +17,7 @@ namespace DB_Library
             try
             {
                 InitializeComponent();
-                string a = ("Author: \n\tVersion: 0.1");
+                string a = ("Author: \n\tVersion: 0.1".ToString());
                 this.textBox1.Text = a;
             }
             catch (Exception ex)
