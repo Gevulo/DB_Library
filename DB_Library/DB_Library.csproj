@@ -85,6 +85,7 @@
     <Compile Include="DeleteForm.Designer.cs">
       <DependentUpon>DeleteForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Facade.cs" />
     <Compile Include="LoadBook.cs" />
     <Compile Include="LoadForm.cs">
       <SubType>Form</SubType>
