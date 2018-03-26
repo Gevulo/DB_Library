@@ -11,10 +11,6 @@ namespace DB_Library
         public void Add()
         {
             
-        }
-        public void add1()
-        {
-
-        }
+        }        
     }
 }
