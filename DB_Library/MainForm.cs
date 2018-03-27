@@ -29,7 +29,10 @@ namespace DB_Library
                 {
                     con.Open();
 
-                    SqlCommand comandString = new SqlCommand(@"SELECT NameBook, Year, Gener, Name, Surname                                                               
+                    
+
+
+                    SqlCommand comandString = new SqlCommand(  @"SELECT NameBook, Year, Gener, Name, Surname                                                               
                                                                FROM Books
                                                                RIGHT JOIN
                                                                Author
