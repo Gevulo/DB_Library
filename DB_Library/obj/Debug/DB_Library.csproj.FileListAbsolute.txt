@@ -11,3 +11,16 @@ C:\Users\student.LAN\Desktop\Oli\CommandProject\DB_Library\DB_Library\obj\Debug\
 C:\Users\student.LAN\Desktop\Oli\CommandProject\DB_Library\DB_Library\obj\Debug\DB_Library.csproj.GenerateResource.Cache
 C:\Users\student.LAN\Desktop\Oli\CommandProject\DB_Library\DB_Library\obj\Debug\DB_Library.exe
 C:\Users\student.LAN\Desktop\Oli\CommandProject\DB_Library\DB_Library\obj\Debug\DB_Library.pdb
+C:\Users\student.LAN\Desktop\GUI\DB_Library\DB_Library\bin\Debug\DB_Library.exe.config
+C:\Users\student.LAN\Desktop\GUI\DB_Library\DB_Library\obj\Debug\DB_Library.exe
+C:\Users\student.LAN\Desktop\GUI\DB_Library\DB_Library\obj\Debug\DB_Library.pdb
+C:\Users\student.LAN\Desktop\GUI\DB_Library\DB_Library\bin\Debug\DB_Library.exe
+C:\Users\student.LAN\Desktop\GUI\DB_Library\DB_Library\bin\Debug\DB_Library.pdb
+C:\Users\student.LAN\Desktop\GUI\DB_Library\DB_Library\obj\Debug\DB_Library.csprojResolveAssemblyReference.cache
+C:\Users\student.LAN\Desktop\GUI\DB_Library\DB_Library\obj\Debug\DB_Library.AboutForm.resources
+C:\Users\student.LAN\Desktop\GUI\DB_Library\DB_Library\obj\Debug\DB_Library.AddForm.resources
+C:\Users\student.LAN\Desktop\GUI\DB_Library\DB_Library\obj\Debug\DB_Library.DeleteForm.resources
+C:\Users\student.LAN\Desktop\GUI\DB_Library\DB_Library\obj\Debug\DB_Library.LoadForm.resources
+C:\Users\student.LAN\Desktop\GUI\DB_Library\DB_Library\obj\Debug\DB_Library.MainForm.resources
+C:\Users\student.LAN\Desktop\GUI\DB_Library\DB_Library\obj\Debug\DB_Library.Properties.Resources.resources
+C:\Users\student.LAN\Desktop\GUI\DB_Library\DB_Library\obj\Debug\DB_Library.csproj.GenerateResource.Cache
