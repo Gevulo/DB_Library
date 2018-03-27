@@ -74,6 +74,10 @@ namespace DB_Library
             {
                 MessageBox.Show(ex.Message);
             }
-        }        
+        }
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
