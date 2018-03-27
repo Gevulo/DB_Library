@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DB_Library
 {
-    class AddBook
+    public static class MediatorLoadBook
     {
-        public void Add()
-        {
-            
-        }        
+        public static Func<DataGridViewRowCollection> GetBooks { set; get; }
     }
 }

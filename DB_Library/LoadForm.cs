@@ -15,6 +15,20 @@ namespace DB_Library
         public LoadForm()
         {
             InitializeComponent();
+            Mediator.MediatorLoadBook.GetNameFile = () => this.textBox1.Text;
+        }
+
+        private void LoadBut_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                LoadBook lb = new LoadBook();
+                lb.Load();               
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

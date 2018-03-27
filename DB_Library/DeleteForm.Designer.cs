@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeleteForm));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.SearchBooksButton = new System.Windows.Forms.Button();
+            this.DeleteBut = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -40,7 +40,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.SearchBooksButton);
+            this.groupBox2.Controls.Add(this.DeleteBut);
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.comboBox1);
@@ -53,14 +53,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Параметры удаления";
             // 
-            // SearchBooksButton
+            // DeleteBut
             // 
-            this.SearchBooksButton.Location = new System.Drawing.Point(754, 19);
-            this.SearchBooksButton.Name = "SearchBooksButton";
-            this.SearchBooksButton.Size = new System.Drawing.Size(181, 64);
-            this.SearchBooksButton.TabIndex = 5;
-            this.SearchBooksButton.Text = "Удалить";
-            this.SearchBooksButton.UseVisualStyleBackColor = true;
+            this.DeleteBut.Location = new System.Drawing.Point(754, 19);
+            this.DeleteBut.Name = "DeleteBut";
+            this.DeleteBut.Size = new System.Drawing.Size(181, 64);
+            this.DeleteBut.TabIndex = 5;
+            this.DeleteBut.Text = "Удалить";
+            this.DeleteBut.UseVisualStyleBackColor = true;
+            this.DeleteBut.Click += new System.EventHandler(this.DeleteBut_Click);
             // 
             // textBox1
             // 
@@ -119,7 +120,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button SearchBooksButton;
+        private System.Windows.Forms.Button DeleteBut;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;

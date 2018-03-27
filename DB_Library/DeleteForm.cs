@@ -16,5 +16,18 @@ namespace DB_Library
         {
             InitializeComponent();
         }
+
+        private void DeleteBut_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DeleteBook df = new DeleteBook();
+                df.Delete();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
