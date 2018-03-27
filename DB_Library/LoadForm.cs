@@ -16,5 +16,18 @@ namespace DB_Library
         {
             InitializeComponent();
         }
+
+        private void LoadBut_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                LoadBook lb = new LoadBook();
+                lb.Load();               
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

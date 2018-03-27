@@ -20,7 +20,8 @@ namespace DB_Library
         {
             try
             {
-
+                AddForm af = new AddForm();
+                af.Show();
             }
             catch (Exception ex)
             {
@@ -31,7 +32,8 @@ namespace DB_Library
         {
             try
             {
-
+                DeleteForm df = new DeleteForm();
+                df.Show();
             }
             catch (Exception ex)
             {
@@ -42,7 +44,8 @@ namespace DB_Library
         {
             try
             {
-
+                LoadForm lf = new LoadForm();
+                lf.Show();
             }
             catch (Exception ex)
             {
