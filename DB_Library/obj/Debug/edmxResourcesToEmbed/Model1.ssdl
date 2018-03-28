@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_A37D63_LibraryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Author">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="Surname" Type="char" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Books">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameBook" Type="char" MaxLength="100" Nullable="false" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="Gener" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="id_Author" Type="int" Nullable="false" />
+    <Property Name="id_Librar" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Librar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NomberCupboard" Type="int" Nullable="false" />
+    <Property Name="NomberShelf" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="Books_fk0">
+    <End Role="Author" Type="Self.Author" Multiplicity="1" />
+    <End Role="Books" Type="Self.Books" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Author">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Books">
+        <PropertyRef Name="id_Author" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Books_fk1">
+    <End Role="Librar" Type="Self.Librar" Multiplicity="1" />
+    <End Role="Books" Type="Self.Books" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Librar">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Books">
+        <PropertyRef Name="id_Librar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_A37D63_LibraryModelStoreContainer">
+    <EntitySet Name="Author" EntityType="Self.Author" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Books" EntityType="Self.Books" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Librar" EntityType="Self.Librar" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="Books_fk0" Association="Self.Books_fk0">
+      <End Role="Author" EntitySet="Author" />
+      <End Role="Books" EntitySet="Books" />
+    </AssociationSet>
+    <AssociationSet Name="Books_fk1" Association="Self.Books_fk1">
+      <End Role="Librar" EntitySet="Librar" />
+      <End Role="Books" EntitySet="Books" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

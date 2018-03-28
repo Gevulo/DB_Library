@@ -15,6 +15,9 @@ namespace DB_Library
         public MainForm()
         {
             InitializeComponent();
+            Mediator.MediatorSearchBook.SearchBook = () => this.comboBox1.SelectedIndex;
+            MediatorLoadBook.GetBooks = () => this.dataGridView1.Rows;
+            Mediator.MediatorDeleteBook.LoadBook = (x) => this.dataGridView1.DataSource = x;
         }
         private void AddBookBut_Click(object sender, EventArgs e)
         {
@@ -56,11 +59,11 @@ namespace DB_Library
         {
             try
             {
-
+               this.dataGridView1.DataSource = SearchBook.Search(this.textBox1.Text);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);                
             }
         }
         private void AboutBut_Click(object sender, EventArgs e)
@@ -77,7 +80,30 @@ namespace DB_Library
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
+            try
+            {
+                LibraryEntities le = new LibraryEntities();
+                var auth = le.Author.ToList();
+                var books = le.Books.ToList();
+                var booksInfo = books.Join(
+                    auth,
+                    x => x.id_Author,
+                    y => y.id,
+                    (x, y) => new BookInfo
+                    {
+                        AuthorFirstName = y.Name,
+                        AuthorSecondName = y.Surname,
+                        Genre = x.Gener,
+                        PublishingYear = x.Year,
+                        Title = x.NameBook
+                    }).ToList();
 
+                this.dataGridView1.DataSource = booksInfo;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
-}
+} 
