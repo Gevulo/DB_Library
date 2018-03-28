@@ -10,14 +10,13 @@ namespace DB_Library
     {
         AddBook ab = new AddBook();
         DeleteBook db = new DeleteBook();
-        LoadBook lb = new LoadBook();
-        SearchBook sb = new SearchBook();
+        LoadBook lb = new LoadBook();        
 
         public void Add()
         {
             return;
         }
-        public void Search()
+        public void Search(string s)
         {
             return;
         }

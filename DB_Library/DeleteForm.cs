@@ -15,19 +15,38 @@ namespace DB_Library
         public DeleteForm()
         {
             InitializeComponent();
+            Mediator.MediatorDeleteBook.DeleteBook = () => this.comboBox1.SelectedIndex;
+            Mediator.MediatorDeleteBook.DeleteBookText = () => this.textBox1.Text;
         }
 
         private void DeleteBut_Click(object sender, EventArgs e)
         {
             try
             {
-                DeleteBook df = new DeleteBook();
-                df.Delete();
+                string d = Mediator.MediatorDeleteBook.DeleteBookText();
+                DeleteBook db = new DeleteBook();
+                db.Delete(d);
+
+                LibraryEntities le = new LibraryEntities();
+
+                var auth = le.Author.ToList();
+                var books = le.Books.ToList();
+
+                var booksInfo = books.Join(auth, x => x.id_Author, y => y.id, (x, y) => new BookInfo
+                    {
+                        AuthorFirstName = y.Name,
+                        AuthorSecondName = y.Surname,
+                        Genre = x.Gener,
+                        PublishingYear = x.Year,
+                        Title = x.NameBook
+                    }).ToList();
+
+                Mediator.MediatorDeleteBook.LoadBook(booksInfo.ToArray());
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-        }
+        }        
     }
 }
