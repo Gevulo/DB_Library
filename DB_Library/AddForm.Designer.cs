@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddForm));
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -35,8 +36,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.AddButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,6 +43,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.AddAuthorBut = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.dB_A37D63_LibraryDataSet = new DB_Library.DB_A37D63_LibraryDataSet();
+            this.authorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.authorTableAdapter = new DB_Library.DB_A37D63_LibraryDataSetTableAdapters.AuthorTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_A37D63_LibraryDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.authorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox7
@@ -91,20 +98,6 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(369, 20);
             this.textBox4.TabIndex = 24;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(33, 106);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(369, 20);
-            this.textBox3.TabIndex = 23;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(33, 67);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(369, 20);
-            this.textBox2.TabIndex = 22;
             // 
             // textBox1
             // 
@@ -168,19 +161,70 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Название книги";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.comboBox1.DataSource = this.authorBindingSource;
+            this.comboBox1.DisplayMember = "Name";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(33, 66);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(305, 21);
+            this.comboBox1.TabIndex = 30;
+            this.comboBox1.ValueMember = "id";            
+            // 
+            // AddAuthorBut
+            // 
+            this.AddAuthorBut.Location = new System.Drawing.Point(344, 81);
+            this.AddAuthorBut.Name = "AddAuthorBut";
+            this.AddAuthorBut.Size = new System.Drawing.Size(58, 30);
+            this.AddAuthorBut.TabIndex = 31;
+            this.AddAuthorBut.Text = "Add";
+            this.AddAuthorBut.UseVisualStyleBackColor = true;
+            this.AddAuthorBut.Click += new System.EventHandler(this.AddAuthorBut_Click);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.comboBox2.DataSource = this.authorBindingSource;
+            this.comboBox2.DisplayMember = "Surname";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(33, 106);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(305, 21);
+            this.comboBox2.TabIndex = 32;
+            this.comboBox2.ValueMember = "id";
+            // 
+            // dB_A37D63_LibraryDataSet
+            // 
+            this.dB_A37D63_LibraryDataSet.DataSetName = "DB_A37D63_LibraryDataSet";
+            this.dB_A37D63_LibraryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // authorBindingSource
+            // 
+            this.authorBindingSource.DataMember = "Author";
+            this.authorBindingSource.DataSource = this.dB_A37D63_LibraryDataSet;
+            // 
+            // authorTableAdapter
+            // 
+            this.authorTableAdapter.ClearBeforeFill = true;
+            // 
             // AddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(414, 292);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.AddAuthorBut);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.label5);
@@ -191,6 +235,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddForm";
+            this.Load += new System.EventHandler(this.AddForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dB_A37D63_LibraryDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.authorBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,8 +251,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Label label5;
@@ -213,5 +258,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button AddAuthorBut;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private DB_A37D63_LibraryDataSet dB_A37D63_LibraryDataSet;
+        private System.Windows.Forms.BindingSource authorBindingSource;
+        private DB_A37D63_LibraryDataSetTableAdapters.AuthorTableAdapter authorTableAdapter;
     }
 }

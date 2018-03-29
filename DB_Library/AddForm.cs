@@ -17,9 +17,7 @@ namespace DB_Library
             InitializeComponent();
 
             //Медиатры для доступа к элементам формы из другога класса
-            Mediator.MediatorAddBook.GetNameBook = () => this.textBox1.Text;
-            Mediator.MediatorAddBook.GetFirstName = () => this.textBox2.Text;
-            Mediator.MediatorAddBook.GetSecondName = () => this.textBox3.Text;
+            Mediator.MediatorAddBook.GetNameBook = () => this.textBox1.Text;            
             Mediator.MediatorAddBook.GetGenre = () => this.textBox4.Text;
             Mediator.MediatorAddBook.GetDate = () => int.Parse(this.textBox5.Text);
             Mediator.MediatorAddBook.GetCupboatd = () => int.Parse(this.textBox6.Text);
@@ -37,6 +35,24 @@ namespace DB_Library
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+        private void AddAuthorBut_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                AddAuthor aa = new AddAuthor();
+                aa.ShowDialog();
+                this.authorTableAdapter.Fill(this.dB_A37D63_LibraryDataSet.Author);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }        
+        private void AddForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dB_A37D63_LibraryDataSet.Author' table. You can move, or remove it, as needed.
+            this.authorTableAdapter.Fill(this.dB_A37D63_LibraryDataSet.Author);
         }
     }
 }
