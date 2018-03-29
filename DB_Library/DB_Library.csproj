@@ -84,6 +84,12 @@
     <Compile Include="AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddAuthor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAuthor.Designer.cs">
+      <DependentUpon>AddAuthor.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddBook.cs" />
     <Compile Include="AddForm.cs">
       <SubType>Form</SubType>
@@ -97,6 +103,11 @@
     <Compile Include="BookInfo.cs" />
     <Compile Include="Books.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB_A37D63_LibraryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_A37D63_LibraryDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="DeleteBook.cs" />
     <Compile Include="DeleteForm.cs">
@@ -144,6 +155,9 @@
     <EmbeddedResource Include="AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddAuthor.resx">
+      <DependentUpon>AddAuthor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddForm.resx">
       <DependentUpon>AddForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +184,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="DB_A37D63_LibraryDataSet.xsc">
+      <DependentUpon>DB_A37D63_LibraryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DB_A37D63_LibraryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_A37D63_LibraryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_A37D63_LibraryDataSet.xss">
+      <DependentUpon>DB_A37D63_LibraryDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>

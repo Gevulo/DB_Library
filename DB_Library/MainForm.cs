@@ -83,6 +83,9 @@ namespace DB_Library
             try
             {
                 LibraryEntities le = new LibraryEntities();
+                List<BookInfo> a = new List<BookInfo>(le.Books.Select(x => new BookInfo() { AuthorFirstName = x.Author.Name, AuthorSecondName = x.Author.Surname, Genre = x.Gener, PublishingYear = x.Year, Title = x.NameBook }));
+
+                /*
                 var auth = le.Author.ToList();
                 var books = le.Books.ToList();
                 var booksInfo = books.Join(
@@ -97,8 +100,9 @@ namespace DB_Library
                         PublishingYear = x.Year,
                         Title = x.NameBook
                     }).ToList();
+                */
 
-                this.dataGridView1.DataSource = booksInfo;
+                this.dataGridView1.DataSource = a;
             }
             catch(Exception ex)
             {

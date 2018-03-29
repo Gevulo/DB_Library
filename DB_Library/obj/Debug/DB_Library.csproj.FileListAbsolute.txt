@@ -16,3 +16,4 @@ C:\Users\student.LAN\Desktop\DB_Library\DB_Library\obj\Debug\DB_Library.exe
 C:\Users\student.LAN\Desktop\DB_Library\DB_Library\obj\Debug\DB_Library.pdb
 C:\Users\student.LAN\Desktop\Oli\CommandProject\DB_Library\DB_Library\bin\Debug\EntityFramework.dll
 C:\Users\student.LAN\Desktop\Oli\CommandProject\DB_Library\DB_Library\bin\Debug\EntityFramework.xml
+C:\Users\student.LAN\Desktop\Oli\CommandProject\DB_Library\DB_Library\obj\Debug\DB_Library.AddAuthor.resources

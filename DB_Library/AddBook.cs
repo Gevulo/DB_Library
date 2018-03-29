@@ -10,19 +10,13 @@ namespace DB_Library
     {
         public void Add()
         {
-            var ab = new LibraryEntities();
+            var le = new LibraryEntities();
             var bk = new Books
             {
                 NameBook = Mediator.MediatorAddBook.GetNameBook(),
                 Gener = Mediator.MediatorAddBook.GetGenre(),
-                Year = Mediator.MediatorAddBook.GetDate()        
-            };
-
-            var ath = new Author
-            {
-                Name = Mediator.MediatorAddBook.GetFirstName(),
-                Surname = Mediator.MediatorAddBook.GetSecondName()            
-            };
+                Year = Mediator.MediatorAddBook.GetDate()
+            };            
 
             var lib = new Librar
             {
@@ -30,11 +24,17 @@ namespace DB_Library
                 NomberCupboard = Mediator.MediatorAddBook.GetCupboatd()
             };
 
-            ab.Books.Add(bk);
-            ab.Author.Add(ath);
-            ab.Librar.Add(lib);
-
-            ab.SaveChanges();
-        }        
+            var c = le.Librar.FirstOrDefault(x => x.NomberCupboard == lib.NomberCupboard && x.NomberShelf == lib.NomberShelf);
+            if (c == null)
+            {
+                le.Librar.Add(lib);
+                le.SaveChanges();
+                lib = le.Librar.FirstOrDefault(x => x.NomberCupboard == lib.NomberCupboard && x.NomberShelf == lib.NomberShelf);
+            }            
+            bk.id_Librar = lib.id;        
+            
+            le.Books.Add(bk);            
+            le.SaveChanges();
+        }
     }
 }
