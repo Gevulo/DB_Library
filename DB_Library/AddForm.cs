@@ -22,7 +22,9 @@ namespace DB_Library
             Mediator.MediatorAddBook.GetDate = () => int.Parse(this.textBox5.Text);
             Mediator.MediatorAddBook.GetCupboatd = () => int.Parse(this.textBox6.Text);
             Mediator.MediatorAddBook.GetShelf = () => int.Parse(this.textBox7.Text);
-            
+
+            MediatorLoadBook.GetName = () => { dynamic d = this.comboBox1.SelectedItem; return d.Row.Name; };
+            MediatorLoadBook.GetSurname = () => { dynamic d = this.comboBox2.SelectedItem; return d.Row.Surname; };
         }                        
         private void AddButton_Click(object sender, EventArgs e)
         {
@@ -53,6 +55,6 @@ namespace DB_Library
         {
             // TODO: This line of code loads data into the 'dB_A37D63_LibraryDataSet.Author' table. You can move, or remove it, as needed.
             this.authorTableAdapter.Fill(this.dB_A37D63_LibraryDataSet.Author);
-        }
+        }        
     }
 }

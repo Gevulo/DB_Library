@@ -25,7 +25,7 @@ namespace DB_Library
             {
                 string d = Mediator.MediatorDeleteBook.DeleteBookText();
                 DeleteBook db = new DeleteBook();
-                db.Delete(d);
+                db.DeleteBoo(d);
 
                 LibraryEntities le = new LibraryEntities();
 

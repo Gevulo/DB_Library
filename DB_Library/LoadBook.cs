@@ -26,8 +26,7 @@ namespace DB_Library
                     sw.WriteLine(rowStr.TrimEnd());
                     rowStr = "";
                 }
-                sw.Close();
-                System.Windows.Forms.MessageBox.Show("Data Successfully Exported");
+                sw.Close();                
             }
             catch (Exception ex)
             {
