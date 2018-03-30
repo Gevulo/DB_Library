@@ -44,13 +44,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.authorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_A37D63_LibraryDataSet = new DB_Library.DB_A37D63_LibraryDataSet();
             this.AddAuthorBut = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dB_A37D63_LibraryDataSet = new DB_Library.DB_A37D63_LibraryDataSet();
-            this.authorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.authorTableAdapter = new DB_Library.DB_A37D63_LibraryDataSetTableAdapters.AuthorTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_A37D63_LibraryDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.authorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_A37D63_LibraryDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox7
@@ -174,6 +174,16 @@
             this.comboBox1.TabIndex = 30;
             this.comboBox1.ValueMember = "id";            
             // 
+            // authorBindingSource
+            // 
+            this.authorBindingSource.DataMember = "Author";
+            this.authorBindingSource.DataSource = this.dB_A37D63_LibraryDataSet;
+            // 
+            // dB_A37D63_LibraryDataSet
+            // 
+            this.dB_A37D63_LibraryDataSet.DataSetName = "DB_A37D63_LibraryDataSet";
+            this.dB_A37D63_LibraryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // AddAuthorBut
             // 
             this.AddAuthorBut.Location = new System.Drawing.Point(344, 81);
@@ -196,16 +206,6 @@
             this.comboBox2.Size = new System.Drawing.Size(305, 21);
             this.comboBox2.TabIndex = 32;
             this.comboBox2.ValueMember = "id";
-            // 
-            // dB_A37D63_LibraryDataSet
-            // 
-            this.dB_A37D63_LibraryDataSet.DataSetName = "DB_A37D63_LibraryDataSet";
-            this.dB_A37D63_LibraryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // authorBindingSource
-            // 
-            this.authorBindingSource.DataMember = "Author";
-            this.authorBindingSource.DataSource = this.dB_A37D63_LibraryDataSet;
             // 
             // authorTableAdapter
             // 
@@ -236,8 +236,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddForm";
             this.Load += new System.EventHandler(this.AddForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dB_A37D63_LibraryDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.authorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_A37D63_LibraryDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

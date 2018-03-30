@@ -20,10 +20,10 @@ namespace DB_Library
         {
             return;
         }
-        public void Delete()
+        public void DeleteBoo()
         {
             return;
-        }
+        }        
         public void Load()
         {
             return;

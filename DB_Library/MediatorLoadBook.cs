@@ -10,5 +10,7 @@ namespace DB_Library
     public static class MediatorLoadBook
     {
         public static Func<DataGridViewRowCollection> GetBooks { set; get; }
+        public static Func<String> GetName { get; set; }
+        public static Func<String> GetSurname { get; set; }
     }
 }

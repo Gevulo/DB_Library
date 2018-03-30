@@ -8,19 +8,47 @@ namespace DB_Library
 {
     class DeleteBook
     {
-        public void Delete(string d)
+        public void DeleteBoo(string d)
         {
-            LibraryEntities le = new LibraryEntities();
-
-            if (Mediator.MediatorDeleteBook.DeleteBook() == 0)
+            try
             {
-                var q = (from x in le.Books where x.NameBook == d select x);
-                if (q != null)
-                {
-                    //le.Books.RemoveRange();
-                    le.SaveChanges();
+                LibraryEntities le = new LibraryEntities();
+                var bk = new Books();
+
+                if (Mediator.MediatorDeleteBook.DeleteBook() == 0)
+                {                 
+                    bk = le.Books.FirstOrDefault(x => x.NameBook == d);                    
+                    if (bk != null)
+                    {
+                        le.Books.Remove(bk);
+                        le.SaveChanges();
+                    }
                 }
-            }            
+
+                if (Mediator.MediatorDeleteBook.DeleteBook() == 1)
+                {
+                    bk = le.Books.FirstOrDefault(x => x.Gener == d);
+                    if (bk != null)
+                    {
+                        le.Books.Remove(bk);
+                        le.SaveChanges();
+                    }
+                }
+
+                if (Mediator.MediatorDeleteBook.DeleteBook() == 2)
+                {
+                    bk = le.Books.FirstOrDefault(x => x.Year.ToString() == d);
+                    if (bk != null)
+                    {
+                        le.Books.Remove(bk);
+                        le.SaveChanges();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
         }
     }
 }
