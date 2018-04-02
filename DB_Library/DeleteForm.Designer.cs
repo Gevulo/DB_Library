@@ -29,99 +29,123 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeleteForm));
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.DeleteBut = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2.SuspendLayout();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.comboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.DeletBut = new MetroFramework.Controls.MetroButton();
+            this.textBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox2
+            // groupBox1
             // 
-            this.groupBox2.Controls.Add(this.DeleteBut);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox2.Location = new System.Drawing.Point(0, 0);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(944, 104);
-            this.groupBox2.TabIndex = 7;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Параметры удаления";
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.DeletBut);
+            this.groupBox1.Controls.Add(this.metroLabel2);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.metroLabel1);
+            this.groupBox1.Location = new System.Drawing.Point(1, 26);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(945, 113);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
             // 
-            // DeleteBut
+            // metroLabel1
             // 
-            this.DeleteBut.Location = new System.Drawing.Point(754, 19);
-            this.DeleteBut.Name = "DeleteBut";
-            this.DeleteBut.Size = new System.Drawing.Size(181, 64);
-            this.DeleteBut.TabIndex = 5;
-            this.DeleteBut.Text = "Удалить";
-            this.DeleteBut.UseVisualStyleBackColor = true;
-            this.DeleteBut.Click += new System.EventHandler(this.DeleteBut_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(473, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(275, 20);
-            this.textBox1.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(352, 45);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Удаляемое значения";
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(6, 47);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(130, 19);
+            this.metroLabel1.TabIndex = 11;
+            this.metroLabel1.Text = "Параметр удаления";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ItemHeight = 23;
             this.comboBox1.Items.AddRange(new object[] {
             "Название",
             "Жанр",
             "Дата издания"});
-            this.comboBox1.Location = new System.Drawing.Point(127, 42);
+            this.comboBox1.Location = new System.Drawing.Point(142, 38);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(202, 21);
-            this.comboBox1.TabIndex = 1;
+            this.comboBox1.Size = new System.Drawing.Size(202, 29);
+            this.comboBox1.TabIndex = 12;
+            this.comboBox1.UseSelectable = true;
             // 
-            // label1
+            // metroLabel2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Параметр удаления";
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(350, 48);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(138, 19);
+            this.metroLabel2.TabIndex = 13;
+            this.metroLabel2.Text = "Удаляемое значение";
+            // 
+            // DeletBut
+            // 
+            this.DeletBut.Location = new System.Drawing.Point(752, 19);
+            this.DeletBut.Name = "DeletBut";
+            this.DeletBut.Size = new System.Drawing.Size(181, 64);
+            this.DeletBut.TabIndex = 14;
+            this.DeletBut.Text = "Удалить";
+            this.DeletBut.UseSelectable = true;
+            // 
+            // textBox1
+            // 
+            // 
+            // 
+            // 
+            this.textBox1.CustomButton.Image = null;
+            this.textBox1.CustomButton.Location = new System.Drawing.Point(238, 1);
+            this.textBox1.CustomButton.Name = "";
+            this.textBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.textBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.textBox1.CustomButton.TabIndex = 1;
+            this.textBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.textBox1.CustomButton.UseSelectable = true;
+            this.textBox1.CustomButton.Visible = false;
+            this.textBox1.Lines = new string[0];
+            this.textBox1.Location = new System.Drawing.Point(486, 44);
+            this.textBox1.MaxLength = 32767;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.PasswordChar = '\0';
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.textBox1.SelectedText = "";
+            this.textBox1.SelectionLength = 0;
+            this.textBox1.SelectionStart = 0;
+            this.textBox1.ShortcutsEnabled = true;
+            this.textBox1.Size = new System.Drawing.Size(260, 23);
+            this.textBox1.TabIndex = 15;
+            this.textBox1.UseSelectable = true;
+            this.textBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.textBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // DeleteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(944, 102);
-            this.Controls.Add(this.groupBox2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.ClientSize = new System.Drawing.Size(944, 162);
+            this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "DeleteForm";
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Style = MetroFramework.MetroColorStyle.Orange;
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button DeleteBut;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroTextBox textBox1;
+        private MetroFramework.Controls.MetroButton DeletBut;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroComboBox comboBox1;
     }
 }

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DB_Library
 {
-    public partial class LoadForm : Form
+    public partial class LoadForm : MetroFramework.Forms.MetroForm
     {
         public LoadForm()
         {

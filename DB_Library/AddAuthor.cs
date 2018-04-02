@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DB_Library
 {
-    public partial class AddAuthor : Form
+    public partial class AddAuthor : MetroFramework.Forms.MetroForm
     {
         public AddAuthor()
         {

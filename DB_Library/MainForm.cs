@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DB_Library
 {
-    public partial class MainForm : Form
+    public partial class MainForm : MetroFramework.Forms.MetroForm
     {
         public MainForm()
         {
@@ -84,23 +84,7 @@ namespace DB_Library
             {
                 LibraryEntities le = new LibraryEntities();
                 List<BookInfo> a = new List<BookInfo>(le.Books.Select(x => new BookInfo() { AuthorFirstName = x.Author.Name, AuthorSecondName = x.Author.Surname, Genre = x.Gener, PublishingYear = x.Year, Title = x.NameBook }));
-
-                /*
-                var auth = le.Author.ToList();
-                var books = le.Books.ToList();
-                var booksInfo = books.Join(
-                    auth,
-                    x => x.id_Author,
-                    y => y.id,
-                    (x, y) => new BookInfo
-                    {
-                        AuthorFirstName = y.Name,
-                        AuthorSecondName = y.Surname,
-                        Genre = x.Gener,
-                        PublishingYear = x.Year,
-                        Title = x.NameBook
-                    }).ToList();
-                */
+               
 
                 this.dataGridView1.DataSource = a;
             }
