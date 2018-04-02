@@ -10,53 +10,46 @@ namespace DB_Library
     {
         public static object Search(string s )
         {
-            try
-            {
-                LibraryEntities le = new LibraryEntities();
+            LibraryEntities le = new LibraryEntities();
 
                 var auth = le.Author.ToList();
-                var books = le.Books.ToList();
-
+                var books = le.Books.ToList();                
+                                              
                 var booksInfo = books.Join(auth, x => x.id_Author, y => y.id, (x, y) => new BookInfo
-                {
-                    AuthorFirstName = y.Name,
-                    AuthorSecondName = y.Surname,
-                    Genre = x.Gener,
-                    PublishingYear = x.Year,
-                    Title = x.NameBook
-                });
+                    {
+                        AuthorFirstName = y.Name,
+                        AuthorSecondName = y.Surname,
+                        Genre = x.Gener,
+                        PublishingYear = x.Year,
+                        Title = x.NameBook
+                    });
 
-                if (Mediator.MediatorSearchBook.SearchBook() == 0)
-                {
-                    booksInfo = booksInfo.Where(x => x.Title.Contains(s));
-                    return booksInfo.ToArray();
-                }
-                if (Mediator.MediatorSearchBook.SearchBook() == 1)
-                {
-                    booksInfo = booksInfo.Where(x => x.AuthorFirstName.Contains(s));
-                    return booksInfo.ToArray();
-                }
-                if (Mediator.MediatorSearchBook.SearchBook() == 2)
-                {
-                    booksInfo = booksInfo.Where(x => x.AuthorSecondName.Contains(s));
-                    return booksInfo.ToArray();
-                }
-                if (Mediator.MediatorSearchBook.SearchBook() == 3)
-                {
-                    booksInfo = booksInfo.Where(x => x.Genre.Contains(s));
-                    return booksInfo.ToArray();
-                }
-                if (Mediator.MediatorSearchBook.SearchBook() == 4)
-                {
-                    booksInfo = booksInfo.Where(x => x.PublishingYear.ToString().Contains(s));
-                    return booksInfo.ToArray();
-                }
-                return new List<BookInfo>();
-            }
-            catch(Exception ex)
+            if (Mediator.MediatorSearchBook.SearchBook() == 0)
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                booksInfo = booksInfo.Where(x => x.Title.Contains(s));
+                return booksInfo.ToArray();
             }
+            if (Mediator.MediatorSearchBook.SearchBook() == 1)
+            {
+                booksInfo = booksInfo.Where(x => x.AuthorFirstName.Contains(s));
+                return booksInfo.ToArray();
+            }
+            if (Mediator.MediatorSearchBook.SearchBook() == 2)
+            {
+                booksInfo = booksInfo.Where(x => x.AuthorSecondName.Contains(s));
+                return booksInfo.ToArray();
+            }
+            if (Mediator.MediatorSearchBook.SearchBook() == 3)
+            {
+                booksInfo = booksInfo.Where(x => x.Genre.Contains(s));
+                return booksInfo.ToArray();
+            }
+            if (Mediator.MediatorSearchBook.SearchBook() == 4)
+            {
+                booksInfo = booksInfo.Where(x => x.PublishingYear.ToString().Contains(s));
+                return booksInfo.ToArray();
+            }
+            return new List<BookInfo>();
         }
     }
 }

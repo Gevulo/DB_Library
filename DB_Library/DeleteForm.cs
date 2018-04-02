@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DB_Library
 {
-    public partial class DeleteForm : Form
+    public partial class DeleteForm : MetroFramework.Forms.MetroForm
     {
         public DeleteForm()
         {
@@ -18,6 +18,7 @@ namespace DB_Library
             Mediator.MediatorDeleteBook.DeleteBook = () => this.comboBox1.SelectedIndex;
             Mediator.MediatorDeleteBook.DeleteBookText = () => this.textBox1.Text;
         }
+
         private void DeleteBut_Click(object sender, EventArgs e)
         {
             try

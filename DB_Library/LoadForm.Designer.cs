@@ -29,57 +29,80 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoadForm));
-            this.LoadBut = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.LoadBut = new MetroFramework.Controls.MetroButton();
+            this.textBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // LoadBut
             // 
-            this.LoadBut.Location = new System.Drawing.Point(304, 27);
+            this.LoadBut.Location = new System.Drawing.Point(306, 46);
             this.LoadBut.Name = "LoadBut";
             this.LoadBut.Size = new System.Drawing.Size(75, 23);
-            this.LoadBut.TabIndex = 5;
+            this.LoadBut.TabIndex = 7;
             this.LoadBut.Text = "Загрузить";
-            this.LoadBut.UseVisualStyleBackColor = true;
+            this.LoadBut.UseSelectable = true;
             this.LoadBut.Click += new System.EventHandler(this.LoadBut_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Имя файла в каторый загрузить книги";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(9, 29);
+            // 
+            // 
+            // 
+            this.textBox1.CustomButton.Image = null;
+            this.textBox1.CustomButton.Location = new System.Drawing.Point(267, 1);
+            this.textBox1.CustomButton.Name = "";
+            this.textBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.textBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.textBox1.CustomButton.TabIndex = 1;
+            this.textBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.textBox1.CustomButton.UseSelectable = true;
+            this.textBox1.CustomButton.Visible = false;
+            this.textBox1.Lines = new string[0];
+            this.textBox1.Location = new System.Drawing.Point(11, 46);
+            this.textBox1.MaxLength = 32767;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(289, 20);
-            this.textBox1.TabIndex = 3;
+            this.textBox1.PasswordChar = '\0';
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.textBox1.SelectedText = "";
+            this.textBox1.SelectionLength = 0;
+            this.textBox1.SelectionStart = 0;
+            this.textBox1.ShortcutsEnabled = true;
+            this.textBox1.Size = new System.Drawing.Size(289, 23);
+            this.textBox1.TabIndex = 8;
+            this.textBox1.UseSelectable = true;
+            this.textBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.textBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(11, 24);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(243, 19);
+            this.metroLabel1.TabIndex = 9;
+            this.metroLabel1.Text = "Имя файла в каторый загрузить книги";
             // 
             // LoadForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 62);
-            this.Controls.Add(this.LoadBut);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(392, 92);
+            this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.textBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Controls.Add(this.LoadBut);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "LoadForm";
+            this.Style = MetroFramework.MetroColorStyle.Orange;
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button LoadBut;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private MetroFramework.Controls.MetroButton LoadBut;
+        private MetroFramework.Controls.MetroTextBox textBox1;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
     }
 }
