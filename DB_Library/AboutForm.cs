@@ -19,6 +19,7 @@ namespace DB_Library
                 InitializeComponent();
                 string a = ("Author: \n\tVersion: 0.4".ToString());
                 this.textBox1.Text = a;
+//
             }
             catch (Exception ex)
             {
