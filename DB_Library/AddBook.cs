@@ -10,46 +10,51 @@ namespace DB_Library
     {
         public void Add()
         {
-            var le = new LibraryEntities();
-            var ath = new Author();
-            var lib = new Librar();
-
-            var name = MediatorLoadBook.GetName();
-            var surname = MediatorLoadBook.GetSurname();
-
-            var bk = new Books
+            try
             {
-                NameBook = Mediator.MediatorAddBook.GetNameBook(),
-                Gener = Mediator.MediatorAddBook.GetGenre(),
-                Year = Mediator.MediatorAddBook.GetDate()
-            };
+                var le = new LibraryEntities();
+                var ath = new Author();
+                var lib = new Librar();
 
+                var name = MediatorLoadBook.GetName();
+                var surname = MediatorLoadBook.GetSurname();
 
-            var NomberShelf = Mediator.MediatorAddBook.GetShelf();
-            var NomberCupboard = Mediator.MediatorAddBook.GetCupboatd();
-                     
-            
-            ath = le.Author.FirstOrDefault(x => x.Name == name && x.Surname == surname);
-            bk.id_Author = ath.id;
+                var bk = new Books
+                {
+                    NameBook = Mediator.MediatorAddBook.GetNameBook(),
+                    Gener = Mediator.MediatorAddBook.GetGenre(),
+                    Year = Mediator.MediatorAddBook.GetDate()
+                };
 
-            var c = le.Librar.FirstOrDefault(x => x.NomberCupboard == lib.NomberCupboard && x.NomberShelf == lib.NomberShelf);            
+                var NomberShelf = Mediator.MediatorAddBook.GetShelf();
+                var NomberCupboard = Mediator.MediatorAddBook.GetCupboatd();
 
-            if (c == null)
-            {
-                le.Librar.Add(lib);
+                ath = le.Author.FirstOrDefault(x => x.Name == name && x.Surname == surname);
+                bk.id_Author = ath.id;
 
-                lib = le.Librar.FirstOrDefault(x => x.NomberCupboard == NomberCupboard && x.NomberShelf == NomberShelf);
-                bk.id_Librar = lib.id;
+                var c = le.Librar.FirstOrDefault(x => x.NomberCupboard == lib.NomberCupboard && x.NomberShelf == lib.NomberShelf);
+
+                if (c == null)
+                {
+                    le.Librar.Add(lib);
+
+                    lib = le.Librar.FirstOrDefault(x => x.NomberCupboard == NomberCupboard && x.NomberShelf == NomberShelf);
+                    bk.id_Librar = lib.id;
+                    le.SaveChanges();
+                }
+                else
+                {
+                    bk.id_Librar = c.id;
+                    le.SaveChanges();
+                }
+
+                le.Books.Add(bk);
                 le.SaveChanges();
             }
-            else
-            {                
-                bk.id_Librar = c.id;
-                le.SaveChanges();
-            }            
-
-            le.Books.Add(bk);            
-            le.SaveChanges();
+            catch(Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
         }
     }
 }
