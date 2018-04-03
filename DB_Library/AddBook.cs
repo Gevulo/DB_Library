@@ -24,7 +24,6 @@ namespace DB_Library
                 Year = Mediator.MediatorAddBook.GetDate()
             };
 
-
             var NomberShelf = Mediator.MediatorAddBook.GetShelf();
             var NomberCupboard = Mediator.MediatorAddBook.GetCupboatd();
                      
