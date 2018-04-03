@@ -36,3 +36,6 @@ C:\Users\student.LAN\Desktop\DB_Library-master\DB_Library\obj\Debug\DB_Library.L
 C:\Users\student.LAN\Desktop\DB_Library-master\DB_Library\obj\Debug\DB_Library.MainForm.resources
 C:\Users\student.LAN\Desktop\DB_Library-master\DB_Library\obj\Debug\DB_Library.Properties.Resources.resources
 C:\Users\student.LAN\Desktop\DB_Library-master\DB_Library\obj\Debug\DB_Library.csproj.GenerateResource.Cache
+C:\Users\student.LAN\Desktop\Oli\CommandProject\DB_Library\DB_Library\bin\Debug\MetroFramework.Design.dll
+C:\Users\student.LAN\Desktop\Oli\CommandProject\DB_Library\DB_Library\bin\Debug\MetroFramework.dll
+C:\Users\student.LAN\Desktop\Oli\CommandProject\DB_Library\DB_Library\bin\Debug\MetroFramework.Fonts.dll
