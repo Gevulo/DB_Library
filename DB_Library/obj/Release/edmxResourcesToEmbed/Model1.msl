@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_A37D63_LibraryModelStoreContainer" CdmEntityContainer="LibraryEntities">
+    <EntitySetMapping Name="Author">
+      <EntityTypeMapping TypeName="DB_A37D63_LibraryModel.Author">
+        <MappingFragment StoreEntitySet="Author">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Books">
+      <EntityTypeMapping TypeName="DB_A37D63_LibraryModel.Books">
+        <MappingFragment StoreEntitySet="Books">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="NameBook" ColumnName="NameBook" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Gener" ColumnName="Gener" />
+          <ScalarProperty Name="id_Author" ColumnName="id_Author" />
+          <ScalarProperty Name="id_Librar" ColumnName="id_Librar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Librar">
+      <EntityTypeMapping TypeName="DB_A37D63_LibraryModel.Librar">
+        <MappingFragment StoreEntitySet="Librar">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="NomberCupboard" ColumnName="NomberCupboard" />
+          <ScalarProperty Name="NomberShelf" ColumnName="NomberShelf" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
