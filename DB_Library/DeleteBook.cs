@@ -37,8 +37,9 @@ namespace DB_Library
 
                 if (Mediator.MediatorDeleteBook.DeleteBook() == 2)
                 {
-                    bk = le.Books.FirstOrDefault(x => x.Year.ToString() == d);
-                    if (bk != null)
+                    //bk = le.Books.FirstOrDefault(x => x.Year.ToString() == d);
+                    var bk1 = (from x in le.Books where x.Year.ToString() == d select x);
+                    if (bk1 != null)
                     {
                         le.Books.Remove(bk);
                         le.SaveChanges();
